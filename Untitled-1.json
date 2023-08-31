@@ -1,0 +1,171 @@
+{
+    "env": "dev",
+    "port": 8080,
+    "corsOrigins": [
+        "*"
+    ],
+    "enableOrderWhatsappNotification": true,
+    "enableProductSearchEvents": true,
+    "scoreCalculationIntervalInMinutes": 2,
+    "saleVoucherWindowInDays": 90,
+    "smsUrl": {
+        "retailer": "https://bit.ly/bm-p-dev",
+        "supplier": "https://bit.ly/2XTkItg",
+        "retailerInviteNotAccepted": "abc",
+        "retailerInvite": "asdasd",
+        "retailerOrder": "asdasd",
+        "supplierOrder": "asdasd"
+    },
+    "db": {
+        "mystore_b2b": {
+            "host": "rds-backend-shared.dev.bizmart.app",
+            "user": "backend_service",
+            "database": "backend_service",
+            "password": "3Bnp13fPyE9rzV3as"
+        },
+        "bizmart_analytics": {
+            "host": "rds-backend-shared.dev.bizmart.app",
+            "user": "backend_service",
+            "database": "bizmart_analytics",
+            "password": "3Bnp13fPyE9rzV3as"
+        },
+        "ba_mongo": {
+            "host": "dev.bjwqo.mongodb.net",
+            "database": "badata_service",
+            "connPrefix": "mongodb+srv",
+            "user": "ms_badata_service",
+            "password": "pPaGBFewXt5GHyPs"
+        }
+    },
+    "api": {
+        "keyAuth": {
+            "secret": "123"
+        },
+        "cognito_oauth": {
+            "awsUserPoolsId": "ap-south-1_VgLmtY1XS",
+            "awsCognitoRegion": "ap-south-1"
+        },
+        "ba_oauth": {
+            "secret": "HdBiO$*BizAnalyst20Y952612"
+        },
+        "biz_analyst": {
+            "endpoint": "https://api.bizanalyst.in",
+            "apiToken": "&9KSkh6!rj^VjJ*_Gd7",
+            "xApiKey": "&9KSkh6!rj^VjJ*_Gd7"
+        },
+        "biz_analyst_data": {
+            "endpoint": "https://3tibwjqt76.execute-api.ap-south-1.amazonaws.com",
+            "apiToken": "RrNnaaniLX"
+        },
+        "bizAnalystPdf": {
+            "endpoint": "https://api.bizanalyst.in"
+        },
+        "search": {
+            "endpoint": "https://bizmart-search-service.dev-0.bizmart.app"
+        }
+    },
+    "message": {
+        "gupshup": {
+            "url": "https://enterprise.smsgupshup.com/GatewayAPI/rest",
+            "userid": "2000193315",
+            "password": "haMBmwnL",
+            "principalEntityId": "1601100000000000654"
+        },
+        "khatabook": {
+            "endpoint": "http://notification-service.dev-0-notification.svc.cluster.local",
+            "apiToken": "15c9530d-b0f1-4c66-8701-c154ee0dab3e",
+            "tenant": "BIZMART"
+        },
+        "templates": {
+            "order_placed_sms_without_price": {
+                "dltId": "1007586035802981708",
+                "text": "Your order ID {{ORDER_ID}} from {{SUPPLIER_NAME}} is placed! You will receive a confirmation message shortly. -MyStore"
+            },
+            "order_placed_sms_with_price": {
+                "dltId": "1007592933791603968",
+                "text": "Your order ID {{ORDER_ID}} from {{SUPPLIER_NAME}} worth Rs.{{GRAND_TOTAL}} is placed! You will receive a confirmation message shortly. -MyStore"
+            },
+            "add_company_successful": {
+                "dltId": "1007183677118580250",
+                "text": "Congratulations, {{COMPANY_NAME}} is now on MyStore! Open this link to make getting orders and inventory management easy: {{LINK}}"
+            },
+            "invite_retailer": {
+                "dltId": "1007409051188951098",
+                "text": "{{SUPPLIER_NAME}} has invited you to join MyStore. Sign up using your mobile number and start placing orders with ease: {{LINK}}"
+            },
+            "edit_party_contact_information": {
+                "dltId": "1007451394040603684",
+                "text": "{{SUPPLIER_NAME}} has invited you to join MyStore. Sign up using your current mobile number and start placing orders with ease: {{LINK}}"
+            },
+            "supplier_receive_order": {
+                "dltId": "1007033094821172835",
+                "text": "You have received an order from {{PARTY_NAME}} , ID: {{ORDER_ID}}. Tap on the link to view the order: {{LINK}} -MyStore"
+            },
+            "supplier_accept_order": {
+                "dltId": "1007747574359300005",
+                "text": "Hooray! {{SUPPLIER_NAME}} has accepted your order, ID: {{ORDER_ID}}. For more details open MyStore: {{LINK}}"
+            },
+            "supplier_partially_accept_order": {
+                "dltId": "1007699703841155434",
+                "text": "Hi, your order has been partially accepted by {{SUPPLIER_NAME}}. Accepted & rejected items' details for order no {{ORDER_ID}} are available in BizMart Party App: {{LINK}}"
+            },
+            "supplier_reject_order": {
+                "dltId": "1007038331125331481",
+                "text": "Order ID {{ORDER_ID}} has been rejected by {{SUPPLIER_NAME}}. You can contact them for more details. Open MyStore for order info: {{LINK}}"
+            },
+            "new_user_added_invite": {
+                "dltId": "1007194717896070199",
+                "text": "{{SUPPLIER_NAME}} has given you access to their MyStore. Log in now using your Biz Analyst login details: {{LINK}}"
+            }
+        }
+    },
+    "newRelic": {
+        "appName": "dev-bm-backend-service",
+        "licenseKey": "eu01xx122672ce2b85554f42520dec597421NRAL"
+    },
+    "s3BucketName": "dev-bm-backend-service",
+    "s3DomainName": "https://bizmart.dev.khatabook.com/",
+    "aws": {
+        "region": "ap-south-1"
+    },
+    "analytics": {
+        "eventsTarget": "rudderstack",
+        "segment": {
+            "writeKey": "a"
+        },
+        "rudderstack": {
+            "writeKey": "2FL4nqEbjU4uNWYs3wLxLrYECla",
+            "dataPlaneUrl": "https://rudderstack-service.dev-0.khatabook.com/"
+        },
+        "clevertap": {
+            "endpoint": "https://api.clevertap.com/1/upload",
+            "supplier": {
+                "accountId": "TEST-794-6W9-WK6Z",
+                "passcode": "${clevertap_supplier_passcode}"
+            },
+            "retailer": {
+                "accountId": "TEST-5R6-6W9-WK6Z",
+                "passcode": "${clevertap_retailer_passcode}"
+            }
+        }
+    },
+    "authentication": {
+        "bizAnalyst": "53E538845512F7B1C2E1933993F63"
+    },
+    "scheduler": {
+        "tardis": {
+            "host": "localhost",
+            "clientName": "schedule",
+            "appId": "abc",
+            "appTokenSecret": "sss"
+        }
+    },
+    "queue": {
+        "productSearchIndex": {
+            "name": "dev-0-bm-backend-search-service-queue.fifo"
+        },
+        "partySearchIndex": {
+            "name": "dev-0-bm-backend-search-service-party-queue.fifo"
+        }
+    }
+}
